@@ -87,6 +87,7 @@ Release checks on 14 October 2026 used a fresh Python 3.12 environment: all save
 - GBM boundaries and critical horizons use a quadratic fit to the first two continuation nodes. The exported critical-horizon table uses the finest saved boundary estimate.
 - GS discounts use the finest grid, `h = 0.00125`. The table's index estimates use first-order Richardson extrapolation, `2*k_fine - k_coarse`, from the two finest grids. The figure uses the finest-grid index directly.
 - The GS log-coordinate domain is `[-3, 2] x [-0.9, 0.9]`; the price-ratio range is approximately `[0.049787, 7.389056]`. The interior stencil checks positivity of its weights. Boundary values use linear extrapolation, which is not a positivity-preserving closure; truncation and boundary effects should be considered when extending the computations.
+- The canonical GS index is signed. The `log(y)` grid covers only positive `y=m/x`, so it resolves only the positive portion of the stopping boundary; `NaN` or omitted estimates indicate an unresolved boundary, not an index of zero.
 - Unresolved indices near the computational boundary are omitted from the figure. The saved Python-readable JSON contains `NaN` for unavailable boundary estimates; strict JSON readers must handle these values explicitly. Missing estimates are not zero.
 - CSV exports retain numerical precision; Markdown exports round for readability. Small differences from older manuscript tables can arise from corrected rounding.
 
