@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+.DS_Store
+code/generated/
+*.log

@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this code and the accompanying paper if you use these computations."
+title: "Numerical code for The end-of-month option in futures contracts and the Gittins index of holding the underlying"
+type: software
+authors:
+  - family-names: Bayraktar
+    given-names: Erhan
+    affiliation: University of Michigan
+repository-code: "https://github.com/ebayr/eom-gittins"
+url: "https://github.com/ebayr/eom-gittins"
+date-released: 2026-10-14
+version: "0.1.0"
